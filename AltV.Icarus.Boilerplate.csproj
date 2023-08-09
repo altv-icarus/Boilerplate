@@ -9,17 +9,23 @@
         <RootNamespace>AltV.Icarus.Boilerplate</RootNamespace>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="Features\ExampleFeature1\" />
-    </ItemGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <OutputPath>G:\ALTV DEV\_icarus\altv-server\resources\icarus</OutputPath>
+      <Optimize>true</Optimize>
+      <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="AltV.Icarus.IoC" Version="1.0.0" />
-      <PackageReference Include="AltV.Net.Async" Version="14.0.2" />
+      <PackageReference Include="AltV.Net.Async" Version="15.0.139-dev" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
       <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AltV.Icarus.Utilities\AltV.Icarus.Utilities.csproj" />
     </ItemGroup>
 
 </Project>
