@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using AltV.Icarus.IoC.Injection;
+using AltV.Icarus.IoC;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,7 +9,6 @@ namespace AltV.Icarus.Boilerplate;
 
 public class Bootstrapper
 {
-     private readonly IHostBuilder _builder;
     private readonly IHost _host;
 
     private readonly ILogger<Bootstrapper> _logger;
@@ -17,14 +16,14 @@ public class Bootstrapper
     public Bootstrapper( )
     {
         Console.WriteLine( "Initiating bootstrapper" );
-        _builder = Host.CreateDefaultBuilder( );
+        var builder = Host.CreateDefaultBuilder( );
 
-        _builder
+        builder
             .UseContentRoot( Path.GetDirectoryName( Assembly.GetExecutingAssembly( ).Location )! )
             .ConfigureAppConfiguration( ConfigureAppConfig )
             .ConfigureServices( ConfigureServices );
 
-        _host = _builder.UseConsoleLifetime( ).Build( );
+        _host = builder.UseConsoleLifetime( ).Build( );
         _logger = _host.Services.GetService<ILogger<Bootstrapper>>( )!;
     }
 
