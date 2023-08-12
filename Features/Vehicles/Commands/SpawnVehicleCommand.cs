@@ -19,6 +19,9 @@ public class SpawnVehicleCommand : IAsyncCommand
             player.Vehicle.Destroy( );
         }
 
+        if( args.Length == 0 )
+            return;
+        
         var model = VehicleList.GetVehicleModelByName( args[ 0 ] );
         
         if( model == default )

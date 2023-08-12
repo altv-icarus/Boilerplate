@@ -1,11 +1,13 @@
 using AltV.Icarus.Commands;
 using AltV.Icarus.IoC.Attributes;
+using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace AltV.Icarus.Boilerplate.Features.Commands.Events;
 
-[Injectable(instantiateOnBoot: true)]
+[Injectable(InstantiateOnBoot = true)]
 public class OnAnyCommandEvent
 {
     private readonly CommandManager _commandManager;
@@ -23,7 +25,7 @@ public class OnAnyCommandEvent
 
         if( !_commandManager.Exists( command ) )
         {
-            player.Emit( "chat:message", $"Command \"{ command }\" does not exist." );
+            player.Emit( "chat:message", null, $"Command \"{ command }\" does not exist." );
         }
         
         _logger.LogInformation( "{PlayerName} sent command: {Command} with arguments: {Arguments}", player.Name, arguments[ 0 ], arguments[1..] );
