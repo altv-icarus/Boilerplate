@@ -1,5 +1,5 @@
-﻿using AltV.Icarus.IoC.Attributes;
-using AltV.Icarus.Utilities;
+﻿using AltV.Icarus.Boilerplate.Utils;
+using AltV.Icarus.IoC.Attributes;
 using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
