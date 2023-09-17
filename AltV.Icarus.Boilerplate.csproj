@@ -16,9 +16,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="AltV.Icarus.Commands" Version="1.0.3" />
-      <PackageReference Include="AltV.Icarus.IoC" Version="1.0.0" />
-      <PackageReference Include="AltV.Net.Async" Version="15.0.139-dev" />
+      <PackageReference Include="AltV.Icarus.Chat" Version="1.0.0" />
+      <PackageReference Include="AltV.Icarus.Commands" Version="1.0.4" />
+      <PackageReference Include="AltV.Icarus.IoC" Version="1.0.2" />
+      <PackageReference Include="AltV.Net.Async" Version="15.0.162-dev" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
       <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />

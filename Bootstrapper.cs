@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using AltV.Icarus.Chat;
 using AltV.Icarus.Commands;
 using AltV.Icarus.IoC;
 using Microsoft.Extensions.Configuration;
@@ -34,25 +35,27 @@ public class Bootstrapper
     {
         configBuilder.AddEnvironmentVariables( "ICARUS_" );
     }
-    
+
     private void ConfigureServices( HostBuilderContext context, IServiceCollection services )
     {
         services.AddOptions( );
-        services.AddSingleton( sp => sp );
-        
+        services.AddSingleton( sp => sp ); 
+
         services.RegisterCommandModule( );
-        
+        services.RegisterChatModule( );
+
         var assemblies = AppDomain.CurrentDomain.GetAssemblies( );
-        
+
         services
-            .ScanForAttributeInjection(assemblies)
-            .ScanForOptionAttributeInjection(context.Configuration,assemblies);
+            .ScanForAttributeInjection( assemblies )
+            .ScanForOptionAttributeInjection( context.Configuration, assemblies );
     }
 
     public Task RunAsync( )
     {
         _host.Services.ResolveStartupServices( );
         _host.Services.InitializeCommandModule( );
+        _host.Services.InitializeChatModule( );
 
         _logger.LogInformation( "Bootstrapper initiated" );
         Console.WriteLine( "" );
