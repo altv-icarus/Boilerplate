@@ -1,6 +1,6 @@
-﻿using AltV.Icarus.Commands.Interfaces;
+﻿using AltV.Atlas.Commands.Interfaces;
 
-namespace AltV.Icarus.Boilerplate.Features.Commands.Extensions;
+namespace AltV.Atlas.Boilerplate.Features.Commands.Extensions;
 
 public interface IExtendedCommand : ICommand
 {

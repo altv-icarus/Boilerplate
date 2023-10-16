@@ -1,4 +1,4 @@
-﻿namespace AltV.Icarus.Boilerplate.Features.Vehicles;
+﻿namespace AltV.Atlas.Boilerplate.Features.Vehicles;
 
 public static class VehicleList
 {

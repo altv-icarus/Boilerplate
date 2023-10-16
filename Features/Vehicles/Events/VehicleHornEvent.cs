@@ -1,12 +1,12 @@
-﻿using AltV.Icarus.Boilerplate.Utils;
-using AltV.Icarus.IoC.Attributes;
+﻿using AltV.Atlas.Boilerplate.Utils;
+using AltV.Atlas.IoC.Attributes;
 using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
 using AltV.Net.Enums;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AltV.Icarus.Boilerplate.Features.Vehicles.Events;
+namespace AltV.Atlas.Boilerplate.Features.Vehicles.Events;
 
 [Injectable(InstantiateOnBoot = true)]
 public class VehicleHornEvent

@@ -1,19 +1,33 @@
-﻿using AltV.Net.Async;
+﻿using AltV.Atlas.Peds;
+using AltV.Net;
+using AltV.Net.Async;
+using AltV.Net.Elements.Entities;
+using AltV.Net.Elements.Factories;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace AltV.Icarus.Boilerplate;
+namespace AltV.Atlas.Boilerplate;
 
 public class Startup : AsyncResource
 {
     private Bootstrapper _bootstrapper;
-    
-    public override async void OnStart( )
+
+    public Startup( )
     {
         _bootstrapper = new Bootstrapper( );
+    }
+
+    public override async void OnStart( )
+    {
         await _bootstrapper.RunAsync( );
     }
 
     public override void OnStop( )
     {
         throw new NotImplementedException( );
+    }
+
+    public override IEntityFactory<IPed> GetPedFactory( )
+    {
+        return PedModule.GetFactory( );
     }
 }

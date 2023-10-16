@@ -1,13 +1,14 @@
 ﻿using System.Reflection;
-using AltV.Icarus.Chat;
-using AltV.Icarus.Commands;
-using AltV.Icarus.IoC;
+using AltV.Atlas.Chat;
+using AltV.Atlas.Commands;
+using AltV.Atlas.IoC;
+using AltV.Atlas.Peds;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace AltV.Icarus.Boilerplate;
+namespace AltV.Atlas.Boilerplate;
 
 public class Bootstrapper
 {
@@ -43,6 +44,7 @@ public class Bootstrapper
 
         services.RegisterCommandModule( );
         services.RegisterChatModule( );
+        services.RegisterPedModule( );
 
         var assemblies = AppDomain.CurrentDomain.GetAssemblies( );
 
@@ -56,11 +58,12 @@ public class Bootstrapper
         _host.Services.ResolveStartupServices( );
         _host.Services.InitializeCommandModule( );
         _host.Services.InitializeChatModule( );
+        _host.Services.InitializePedModule( );
 
         _logger.LogInformation( "Bootstrapper initiated" );
         Console.WriteLine( "" );
         Console.WriteLine( "|------------------------------------------------------------------------------|" );
-        Console.WriteLine( "|                      alt:V MP Icarus Boilerplate started!                    |" );
+        Console.WriteLine( "|                      alt:V MP Atlas Boilerplate started!                     |" );
         Console.WriteLine( "|------------------------------------------------------------------------------|" );
         Console.WriteLine( $"| .NET Version: {Environment.Version.ToString( )}                                                          |" );
         Console.WriteLine( "|------------------------------------------------------------------------------|" );
