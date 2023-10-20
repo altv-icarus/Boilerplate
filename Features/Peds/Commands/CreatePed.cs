@@ -27,6 +27,6 @@ public class CreatePed : ICommand
             return;
 
         var ped = await _pedFactory.CreatePedAsync<IAtlasPed>( pedModel, player.Position, player.Rotation );
-        ped.SetToWander( ped.Position, 30, 0, 5 );
+        ped.SetToWander( player.Position, 30, 5, 5 );
     }
 }

@@ -58,7 +58,6 @@ public class Bootstrapper
         _host.Services.ResolveStartupServices( );
         _host.Services.InitializeCommandModule( );
         _host.Services.InitializeChatModule( );
-        _host.Services.InitializePedModule( );
 
         _logger.LogInformation( "Bootstrapper initiated" );
         Console.WriteLine( "" );
