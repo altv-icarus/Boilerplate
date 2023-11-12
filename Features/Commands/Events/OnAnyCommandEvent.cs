@@ -1,11 +1,11 @@
-using AltV.Icarus.Commands;
-using AltV.Icarus.IoC.Attributes;
+using AltV.Atlas.Commands;
+using AltV.Atlas.IoC.Attributes;
 using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace AltV.Icarus.Boilerplate.Features.Commands.Events;
+namespace AltV.Atlas.Boilerplate.Features.Commands.Events;
 
 [Injectable(InstantiateOnBoot = true)]
 public class OnAnyCommandEvent

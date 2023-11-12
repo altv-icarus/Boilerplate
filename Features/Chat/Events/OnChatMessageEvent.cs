@@ -1,10 +1,10 @@
-using AltV.Icarus.Chat;
-using AltV.Icarus.Chat.Interfaces;
-using AltV.Icarus.IoC.Attributes;
+using AltV.Atlas.Chat;
+using AltV.Atlas.Chat.Interfaces;
+using AltV.Atlas.IoC.Attributes;
 using AltV.Net.Elements.Entities;
 using Microsoft.Extensions.Logging;
 
-namespace AltV.Icarus.Boilerplate.Features.Chat.Events;
+namespace AltV.Atlas.Boilerplate.Features.Chat.Events;
 
 [Injectable(InstantiateOnBoot = true)]
 public class OnChatMessageEvent

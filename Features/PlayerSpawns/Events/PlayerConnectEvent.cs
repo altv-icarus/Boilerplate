@@ -1,4 +1,4 @@
-﻿using AltV.Icarus.IoC.Attributes;
+﻿using AltV.Atlas.IoC.Attributes;
 using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Data;
@@ -6,7 +6,7 @@ using AltV.Net.Elements.Entities;
 using AltV.Net.Enums;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AltV.Icarus.Boilerplate.Features.PlayerSpawns.Events;
+namespace AltV.Atlas.Boilerplate.Features.PlayerSpawns.Events;
 
 [Injectable(InstantiateOnBoot = true)]
 public class PlayerConnectEvent

@@ -1,4 +1,4 @@
-﻿namespace AltV.Icarus.Boilerplate.Utils;
+﻿namespace AltV.Atlas.Boilerplate.Utils;
 
 
 public static class EnumUtils

@@ -1,10 +1,10 @@
-using AltV.Icarus.Boilerplate.Features.Commands.Extensions;
-using AltV.Icarus.Commands.Interfaces;
+using AltV.Atlas.Boilerplate.Features.Commands.Extensions;
+using AltV.Atlas.Commands.Interfaces;
 using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
 
-namespace AltV.Icarus.Boilerplate.Features.Vehicles.Commands;
+namespace AltV.Atlas.Boilerplate.Features.Vehicles.Commands;
 
 public class SpawnVehicleCommand : IExtendedCommand
 {
