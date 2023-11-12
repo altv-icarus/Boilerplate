@@ -34,7 +34,7 @@ public class Bootstrapper
 
     private void ConfigureAppConfig( HostBuilderContext context, IConfigurationBuilder configBuilder )
     {
-        configBuilder.AddEnvironmentVariables( "ICARUS_" );
+        configBuilder.AddEnvironmentVariables( "ATLAS_" );
     }
 
     private void ConfigureServices( HostBuilderContext context, IServiceCollection services )
