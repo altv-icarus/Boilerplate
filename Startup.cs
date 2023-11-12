@@ -1,5 +1,4 @@
-﻿using AltV.Atlas.Peds;
-using AltV.Net;
+﻿using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
 using AltV.Net.Elements.Factories;

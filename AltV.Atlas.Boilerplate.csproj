@@ -18,15 +18,12 @@
       <PackageReference Include="AltV.Atlas.Chat" Version="1.1.0" />
       <PackageReference Include="AltV.Atlas.Commands" Version="1.1.0" />
       <PackageReference Include="AltV.Atlas.IoC" Version="1.0.2" />
+      <PackageReference Include="AltV.Atlas.Peds" Version="1.0.0" />
       <PackageReference Include="AltV.Net" Version="15.0.5" />
       <PackageReference Include="AltV.Net.Async" Version="15.0.5" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
       <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\AltV.Atlas.Peds\src\AltV.Atlas.Peds.csproj" />
     </ItemGroup>
 </Project>
