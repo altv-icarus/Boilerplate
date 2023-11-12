@@ -28,6 +28,6 @@ public class Startup : AsyncResource
 
     public override IEntityFactory<IPed> GetPedFactory( )
     {
-        return PedModule.GetFactory( );
+        return _bootstrapper.Services.GetService<IEntityFactory<IPed>>( )!;
     }
 }
