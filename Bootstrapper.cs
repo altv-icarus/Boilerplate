@@ -13,7 +13,6 @@ namespace AltV.Atlas.Boilerplate;
 public class Bootstrapper
 {
     private readonly IHost _host;
-
     private readonly ILogger<Bootstrapper> _logger;
 
     public Bootstrapper( )
