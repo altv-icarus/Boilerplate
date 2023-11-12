@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace AltV.Icarus.Boilerplate.Features.Vehicles.Events;
 
-[Injectable(lifetime: ServiceLifetime.Singleton, InstantiateOnBoot = true)]
+[Injectable(InstantiateOnBoot = true)]
 public class VehicleHornEvent
 {
     public VehicleHornEvent( )

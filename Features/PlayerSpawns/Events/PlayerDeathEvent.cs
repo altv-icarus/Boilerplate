@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace AltV.Icarus.Boilerplate.Features.PlayerSpawns.Events;
 
-[Injectable(lifetime: ServiceLifetime.Singleton, InstantiateOnBoot = true)]
+[Injectable(InstantiateOnBoot = true)]
 public class PlayerDeathEvent
 {
     private readonly PlayerSpawner _playerSpawner;
