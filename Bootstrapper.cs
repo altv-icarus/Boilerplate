@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using AltV.Icarus.Commands;
 using AltV.Icarus.IoC;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -39,6 +40,8 @@ public class Bootstrapper
         services.AddOptions( );
         services.AddSingleton( sp => sp );
         
+        services.RegisterCommandModule( );
+        
         var assemblies = AppDomain.CurrentDomain.GetAssemblies( );
         
         services
@@ -49,6 +52,7 @@ public class Bootstrapper
     public Task RunAsync( )
     {
         _host.Services.ResolveStartupServices( );
+        _host.Services.InitializeCommandModule( );
 
         _logger.LogInformation( "Bootstrapper initiated" );
         Console.WriteLine( "" );

@@ -16,6 +16,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="AltV.Icarus.Commands" Version="1.0.0" />
       <PackageReference Include="AltV.Icarus.IoC" Version="1.0.0" />
       <PackageReference Include="AltV.Net.Async" Version="15.0.139-dev" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
@@ -27,5 +28,8 @@
     <ItemGroup>
       <ProjectReference Include="..\AltV.Icarus.Utilities\AltV.Icarus.Utilities.csproj" />
     </ItemGroup>
+
+
+
 
 </Project>
