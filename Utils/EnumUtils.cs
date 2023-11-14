@@ -1,4 +1,4 @@
-﻿namespace AltV.Atlas.Boilerplate.Utils;
+﻿namespace AltV.Atlas.Boilerplate.Server.Utils;
 
 
 public static class EnumUtils

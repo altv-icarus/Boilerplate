@@ -5,7 +5,7 @@ using AltV.Net.Elements.Entities;
 using AltV.Net.Enums;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AltV.Atlas.Boilerplate.Features.PlayerSpawns;
+namespace AltV.Atlas.Boilerplate.Server.Features.PlayerSpawns;
 
 [Injectable(lifetime: ServiceLifetime.Transient)]
 public class PlayerSpawner

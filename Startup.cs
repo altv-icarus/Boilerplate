@@ -4,7 +4,7 @@ using AltV.Net.Elements.Entities;
 using AltV.Net.Elements.Factories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AltV.Atlas.Boilerplate;
+namespace AltV.Atlas.Boilerplate.Server;
 
 public class Startup : AsyncResource
 {

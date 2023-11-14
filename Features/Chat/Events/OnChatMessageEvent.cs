@@ -4,7 +4,7 @@ using AltV.Atlas.IoC.Attributes;
 using AltV.Net.Elements.Entities;
 using Microsoft.Extensions.Logging;
 
-namespace AltV.Atlas.Boilerplate.Features.Chat.Events;
+namespace AltV.Atlas.Boilerplate.Server.Features.Chat.Events;
 
 [Injectable(InstantiateOnBoot = true)]
 public class OnChatMessageEvent

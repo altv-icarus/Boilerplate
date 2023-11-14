@@ -5,7 +5,7 @@ using AltV.Net.Elements.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace AltV.Atlas.Boilerplate.Features.Commands.Events;
+namespace AltV.Atlas.Boilerplate.Server.Features.Commands.Events;
 
 [Injectable(InstantiateOnBoot = true)]
 public class OnAnyCommandEvent

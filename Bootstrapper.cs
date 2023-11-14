@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace AltV.Atlas.Boilerplate;
+namespace AltV.Atlas.Boilerplate.Server;
 
 public class Bootstrapper
 {

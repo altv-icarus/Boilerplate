@@ -6,7 +6,7 @@ using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
 using AltV.Net.Enums;
 
-namespace AltV.Atlas.Boilerplate.Features.Peds.Commands;
+namespace AltV.Atlas.Boilerplate.Server.Features.Peds.Commands;
 
 public class CreatePed : ICommand
 {

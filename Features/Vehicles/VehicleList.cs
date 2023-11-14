@@ -1,4 +1,4 @@
-﻿namespace AltV.Atlas.Boilerplate.Features.Vehicles;
+﻿namespace AltV.Atlas.Boilerplate.Server.Features.Vehicles;
 
 public static class VehicleList
 {

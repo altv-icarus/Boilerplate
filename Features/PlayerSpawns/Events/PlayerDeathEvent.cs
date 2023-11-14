@@ -3,7 +3,7 @@ using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AltV.Atlas.Boilerplate.Features.PlayerSpawns.Events;
+namespace AltV.Atlas.Boilerplate.Server.Features.PlayerSpawns.Events;
 
 [Injectable(InstantiateOnBoot = true)]
 public class PlayerDeathEvent
