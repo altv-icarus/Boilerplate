@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <OutputPath>G:\ALTV DEV\_atlas\altv-server\resources\atlas-client-cs</OutputPath>
+        <Optimize>true</Optimize>
+        <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="AltV.Net.Client.Async" Version="15.0.5" />
+      <PackageReference Include="AutoRegisterInject" Version="1.2.1" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\AltV.Atlas.Client.DependencyInjection\AltV.Atlas.Client.DependencyInjection.csproj" />
+      <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds.Client\AltV.Atlas.Peds.Client.csproj" />
+      <ProjectReference Include="..\AltV.Atlas.Client.DependencyInjection\AltV.Atlas.Client.DependencyInjection.csproj" />
+      <ProjectReference Include="..\AltV.Atlas.Peds\AltV.Atlas.Peds.Client\AltV.Atlas.Peds.Client.csproj" />
+    </ItemGroup>
+
+</Project>
