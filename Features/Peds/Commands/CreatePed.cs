@@ -1,7 +1,8 @@
 ﻿using AltV.Atlas.Commands.Interfaces;
 using AltV.Atlas.Peds.Factories;
 using AltV.Atlas.Peds.Interfaces;
-
+using AltV.Atlas.Peds.PedTasks;
+using AltV.Atlas.Peds.Shared.Interfaces;
 using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
 using AltV.Net.Enums;
@@ -27,6 +28,7 @@ public class CreatePed : ICommand
             return;
 
         var ped = await _pedFactory.CreatePedAsync<IAtlasPed>( pedModel, player.Position, player.Rotation );
-        ped.SetToWander( player.Position, 30, 5, 5 );
+        var task = new PedTaskWander( player.Position, 30, 5, 5 );
+        ped.SetPedTask( task );
     }
 }
