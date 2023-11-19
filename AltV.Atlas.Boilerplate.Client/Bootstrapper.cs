@@ -34,7 +34,6 @@ public class Bootstrapper
     public void Run( )
     {
         _serviceProvider.ResolveStartupServices( );
-        _serviceProvider.InitializePedModule( );
         
         _logger.LogInformation( "Bootstrapper initiated" );
         Console.WriteLine( "" );
