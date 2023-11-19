@@ -19,21 +19,12 @@
       <PackageReference Include="AltV.Atlas.Chat" Version="1.1.0" />
       <PackageReference Include="AltV.Atlas.Commands" Version="1.1.0" />
       <PackageReference Include="AltV.Atlas.IoC" Version="1.0.3" />
+      <PackageReference Include="AltV.Atlas.Peds" Version="2.0.0" />
       <PackageReference Include="AltV.Net" Version="15.0.5" />
       <PackageReference Include="AltV.Net.Async" Version="15.0.5" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
       <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds.Shared\AltV.Atlas.Peds.Shared.csproj" />
-      <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds\src\AltV.Atlas.Peds.csproj" />
-      <ProjectReference Include="..\AltV.Atlas.Peds\AltV.Atlas.Peds\src\AltV.Atlas.Peds.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\AltV.Atlas.Peds\AltV.Atlas.Peds\src\AltV.Atlas.Peds.csproj" />
     </ItemGroup>
 </Project>
