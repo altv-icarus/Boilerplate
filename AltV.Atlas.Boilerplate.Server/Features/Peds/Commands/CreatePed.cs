@@ -1,8 +1,11 @@
-﻿using AltV.Atlas.Commands.Interfaces;
+﻿using AltV.Atlas.Boilerplate.Server.Features.Peds.Tasks;
+using AltV.Atlas.Commands.Interfaces;
 using AltV.Atlas.Peds.Factories;
+using AltV.Atlas.Peds.Interfaces;
 using AltV.Atlas.Peds.PedTasks;
 using AltV.Atlas.Peds.Shared.Interfaces;
 using AltV.Net.Elements.Entities;
+using AltV.Net.Enums;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Peds.Commands;
 
@@ -24,8 +27,9 @@ public class CreatePed : ICommand
         if( pedModel == "" )
             return;
 
-        var ped = await _pedFactory.CreatePedAsync<IAtlasPed>( pedModel, player.Position, player.Rotation );
-        var task = new PedTaskWander( player.Position, 30, 5, 5 );
+        var ped = await _pedFactory.CreatePedAsync<IAtlasServerPed>( pedModel, player.Position, player.Rotation );
+        // var task = new PedTaskWander( player.Position, 30, 5, 5 );
+        var task = new PedTaskAttackPlayer( player.Id ); //, WeaponModel.SpecialCarbine );
         ped.SetPedTask( task );
     }
 }

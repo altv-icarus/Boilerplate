@@ -14,10 +14,21 @@
     </PropertyGroup>
     
     <ItemGroup>
-      <PackageReference Include="AltV.Atlas.Peds.Client" Version="1.0.0" />
       <PackageReference Include="AltV.Net.Client.Async" Version="15.0.5" />
       <PackageReference Include="AutoRegisterInject" Version="1.2.1" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    </ItemGroup>
+    
+    <ItemGroup Condition=" '$(Configuration)' != 'Debug' ">
+        <PackageReference Include="AltV.Atlas.Peds.Client" Version="1.0.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds.Client\AltV.Atlas.Peds.Client.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
 
 </Project>
