@@ -1,4 +1,6 @@
-﻿using AltV.Net;
+﻿using AltV.Atlas.Vehicles.AltV.Interfaces;
+using AltV.Atlas.Vehicles.Interfaces;
+using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
 using AltV.Net.Elements.Factories;
@@ -28,5 +30,10 @@ public class Startup : AsyncResource
     public override IEntityFactory<IPed> GetPedFactory( )
     {
         return _bootstrapper.Services.GetService<IEntityFactory<IPed>>( )!;
+    }
+
+    public override IEntityFactory<IVehicle> GetVehicleFactory( )
+    {
+        return _bootstrapper.Services.GetService<IEntityFactory<IAtlasVehicle>>( )!;
     }
 }

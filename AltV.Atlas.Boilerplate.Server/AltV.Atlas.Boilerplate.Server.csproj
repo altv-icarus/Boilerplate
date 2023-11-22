@@ -33,6 +33,7 @@
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <ProjectReference Include="..\..\AltV.Atlas.Vehicles\src\AltV.Atlas.Vehicles.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.Chat\src\AltV.Atlas.Chat.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.Commands\src\AltV.Atlas.Commands.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.IoC\AltV.Atlas.IoC.csproj" />

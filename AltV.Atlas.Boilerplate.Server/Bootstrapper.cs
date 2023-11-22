@@ -1,8 +1,12 @@
 ﻿using System.Reflection;
+using AltV.Atlas.Boilerplate.Server.Features.Vehicles.Overrides;
 using AltV.Atlas.Chat;
 using AltV.Atlas.Commands;
 using AltV.Atlas.IoC;
 using AltV.Atlas.Peds;
+using AltV.Atlas.Vehicles;
+using AltV.Atlas.Vehicles.Factories;
+using AltV.Atlas.Vehicles.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -44,7 +48,10 @@ public class Bootstrapper
         services.RegisterCommandModule( );
         services.RegisterChatModule( );
         services.RegisterPedModule( );
+        services.RegisterVehicleModule( );
 
+        services.AddTransient<ExtendedVehicle>( );
+        
         var assemblies = AppDomain.CurrentDomain.GetAssemblies( );
 
         services
