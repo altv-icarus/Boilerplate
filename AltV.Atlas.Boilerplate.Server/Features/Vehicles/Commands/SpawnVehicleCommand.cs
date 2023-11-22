@@ -59,10 +59,10 @@ public class SpawnVehicleCommand : IExtendedCommand
             return;
         }
 
-        // var vehicle = await _vehicleFactory.CreateVehicleAsync<ExtendedVehicle>( model, player.Position, player.Rotation );
-        // _logger.LogInformation( "Vehicle type: {Type}", vehicle.GetType( ) );
-        // // vehicle.NumberPlate = "testing";
-        // player.SetIntoVehicle( vehicle, 1 );
+        var vehicle = await _vehicleFactory.CreateVehicleAsync<ExtendedVehicle>( model, player.Position, player.Rotation );
+        _logger.LogInformation( "Vehicle type: {Type}", vehicle.GetType( ) );
+        vehicle.NumberPlate = "extended";
+        player.SetIntoVehicle( vehicle, 1 );
     }
 
 }
