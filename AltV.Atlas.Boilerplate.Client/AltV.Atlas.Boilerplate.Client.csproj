@@ -28,6 +28,7 @@
     </ItemGroup>
     
     <ItemGroup>
+      <ProjectReference Include="..\..\AltV.Atlas.Peds.Traffic\AltV.Atlas.Peds.Traffic.Client\AltV.Atlas.Peds.Traffic.Client.csproj" />
       <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
 

@@ -20,11 +20,9 @@ public class PedTaskAttackPlayer : PedTaskAttackPlayerBase
     
     public override void OnStart( ISharedPed ped )
     {
-        Alt.Log( "OnStart PedTaskAttackPlayer 1" );
         if( ped is not IAtlasClientPed atlasClientPed || !ped.Exists )
             return;
         
-        Alt.Log( "OnStart PedTaskAttackPlayer 2" );
         _target = Alt.GetAllPlayers( ).FirstOrDefault( p => p.RemoteId == TargetId );
         _ped = atlasClientPed;
         
@@ -43,7 +41,6 @@ public class PedTaskAttackPlayer : PedTaskAttackPlayerBase
         if( _target is null )
             return;
             
-        Alt.Log( "OnTick PedTaskAttackPlayer 2" );
         Alt.Natives.ClearPedSecondaryTask( _ped.ScriptId );
 
         var dist = _ped.Position.Distance( _target.Position );
@@ -51,30 +48,25 @@ public class PedTaskAttackPlayer : PedTaskAttackPlayerBase
         var hasLosToTarget = Alt.Natives.HasEntityClearLosToEntity( _ped.ScriptId, _target, 17 );
         var firingPattern = Alt.Hash( "FIRING_PATTERN_FULL_AUTO" );
 
-        Alt.Log( "OnTick PedTaskAttackPlayer 3" );
         if( hasLosToTarget )
         {
             if( WeaponHash != 0 )
             {
-                Alt.Log( $"OnTick PedTaskAttackPlayer: { _ped.ScriptId }, { _target.ScriptId }, {firingPattern}" );
                 Alt.Natives.TaskShootAtEntity( _ped.ScriptId, _target, 5000, firingPattern );
             }
             else
             {
-                Alt.Log( $"OnTick PedTaskAttackPlayer melee: { _ped.ScriptId }, { _target.ScriptId }" );
                 Alt.Natives.TaskCombatPed( _ped.ScriptId, _target, 0, 16 );
             }
         }
         else if( dist is < 120 and > 5 )
         {
-            Alt.Log( "OnTick PedTaskAttackPlayer 5" );
             Alt.Natives.TaskGoToEntityWhileAimingAtEntity( _ped.ScriptId, _target, _target, 1.7f, true, 0, 0, true, true, firingPattern );
         }
     }
 
     public override void OnStop( )
     {
-        Alt.Log( "OnStop PedTaskAttackPlayer 1" );
         Alt.Natives.RemoveAllPedWeapons( _ped.ScriptId, true );
 
         if( _interval is not null )

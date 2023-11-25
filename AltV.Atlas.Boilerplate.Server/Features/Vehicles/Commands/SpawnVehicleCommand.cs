@@ -14,28 +14,9 @@ using Microsoft.Extensions.Logging;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Vehicles.Commands;
 
-public class SpawnVehicleCommand : IExtendedCommand
+public class SpawnVehicleCommand( IAtlasVehicleFactory vehicleFactory, ILogger<SpawnVehicleCommand> logger ) : IExtendedCommand
 {
-    private readonly IAtlasVehicleFactory _vehicleFactory;
-    private readonly ILogger<SpawnVehicleCommand> _logger;
-
-    public SpawnVehicleCommand( IAtlasVehicleFactory vehicleFactory, ILogger<SpawnVehicleCommand> logger )
-    {
-        _vehicleFactory = vehicleFactory;
-        _logger = logger;
-
-
-        Task.Run( async ( ) =>
-        {
-            var veh = await _vehicleFactory.CreateVehicleAsync<ExtendedVehicle>( ( uint ) VehicleModel.Adder, new Position( 0, 0, 0 ), new Rotation( 0, 0, 0 ) );
-            _logger.LogInformation( "Veh: {Type}", veh.GetType(  ) );
-            
-            _logger.LogInformation( "ID: {Id}, Plate: {Numberplate}", veh.Id, veh.NumberplateText );
-            veh.NumberPlate = "Test";
-            _logger.LogInformation( "2: ID: {Id}, Plate: {Numberplate}", veh.Id, veh.NumberplateText );
-            
-        } ).HandleException(_logger, "Failed to create vehicle" );
-    }
+    private readonly ILogger<SpawnVehicleCommand> _logger = logger;
 
     public string Name { get; set; } = "vehicle";
     public string[ ]? Aliases { get; set; } = new[ ] { "v", "sv" };
@@ -59,8 +40,7 @@ public class SpawnVehicleCommand : IExtendedCommand
             return;
         }
 
-        var vehicle = await _vehicleFactory.CreateVehicleAsync<ExtendedVehicle>( model, player.Position, player.Rotation );
-        _logger.LogInformation( "Vehicle type: {Type}", vehicle.GetType( ) );
+        var vehicle = await vehicleFactory.CreateVehicleAsync<ExtendedVehicle>( model, player.Position, player.Rotation );
         vehicle.NumberPlate = "extended";
         player.SetIntoVehicle( vehicle, 1 );
     }

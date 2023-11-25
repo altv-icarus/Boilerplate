@@ -22,6 +22,7 @@
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+        <ProjectReference Include="..\..\AltV.Atlas.Peds.Traffic\AltV.Atlas.Peds.Traffic.Server\AltV.Atlas.Peds.Traffic.Server.csproj" />
         <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
     
@@ -38,5 +39,9 @@
         <ProjectReference Include="..\..\AltV.Atlas.Commands\src\AltV.Atlas.Commands.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.IoC\AltV.Atlas.IoC.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds\src\AltV.Atlas.Peds.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\PedTraffic\" />
     </ItemGroup>
 </Project>

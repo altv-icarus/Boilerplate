@@ -7,6 +7,7 @@ using AltV.Atlas.Peds;
 using AltV.Atlas.Vehicles;
 using AltV.Atlas.Vehicles.Factories;
 using AltV.Atlas.Vehicles.Interfaces;
+using AltV.Atlas.Peds.Traffic.Server;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -49,6 +50,7 @@ public class Bootstrapper
         services.RegisterChatModule( );
         services.RegisterPedModule( );
         services.RegisterVehicleModule( );
+        services.RegisterPedTrafficModule( );
 
         services.AddTransient<ExtendedVehicle>( );
         
@@ -64,6 +66,7 @@ public class Bootstrapper
         _host.Services.ResolveStartupServices( );
         _host.Services.InitializeCommandModule( );
         _host.Services.InitializeChatModule( );
+        _host.Services.InitializePedTrafficModule( );
 
         _logger.LogInformation( "Bootstrapper initiated" );
         Console.WriteLine( "" );
