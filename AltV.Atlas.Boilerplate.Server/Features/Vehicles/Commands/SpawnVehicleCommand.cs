@@ -1,5 +1,6 @@
 using AltV.Atlas.Boilerplate.Server.Features.Commands.Extensions;
 using AltV.Atlas.Boilerplate.Server.Features.Vehicles.Overrides;
+using AltV.Atlas.Chat;
 using AltV.Atlas.Commands.Interfaces;
 using AltV.Atlas.Shared.Extensions;
 using AltV.Atlas.Vehicles.Entities;
@@ -35,13 +36,11 @@ public class SpawnVehicleCommand( IAtlasVehicleFactory vehicleFactory, ILogger<S
         
         if( model == default )
         {
-            player.Emit( "chat:message", $"[Usage] { HelpText }" );
-            //TODO: Send chat message once chat module is added
+            player.SendChatMessage( $"[Usage] { HelpText }" );
             return;
         }
 
-        var vehicle = await vehicleFactory.CreateVehicleAsync<ExtendedVehicle>( model, player.Position, player.Rotation );
-        vehicle.NumberPlate = "extended";
+        var vehicle = await vehicleFactory.CreateVehicleAsync<AtlasTuningVehicle>( model, player.Position, player.Rotation );
         player.SetIntoVehicle( vehicle, 1 );
     }
 
