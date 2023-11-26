@@ -8,26 +8,21 @@ namespace AltV.Atlas.Boilerplate.Client;
 
 public class Startup : AsyncResource
 {
-    private Bootstrapper _bootstrapper;
-
-    public Startup()
-    {
-        _bootstrapper = new Bootstrapper(  );
-    }
-
+    private Lazy<Bootstrapper> _bootstrapper = new();
+    
     public override void OnStart( )
     {
-        _bootstrapper.Run( );
+        _bootstrapper.Value.Run( );
     }
 
     public override void OnStop( )
     {
-        throw new NotImplementedException( );
+        
     }
     
     public override IEntityFactory<IPed> GetPedFactory( )
     {
         Alt.Log( "GetPedFactory" );
-        return _bootstrapper.Services.GetService<IEntityFactory<IPed>>( )!;
+        return _bootstrapper.Value.Services.GetService<IEntityFactory<IPed>>( )!;
     }
 }

@@ -1,12 +1,18 @@
-﻿using AltV.Atlas.Peds.Client;
+﻿using System.Text.Json;
+using AltV.Atlas.Client.Configuration;
+using AltV.Atlas.Peds.Client;
 using AltV.Atlas.Peds.Traffic.Client;
+using AltV.Atlas.Shared.Converters;
+using AltV.Atlas.Shared.Models;
+using AltV.Net.Client;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AltV.Atlas.Boilerplate.Client;
 
 public class Bootstrapper
 {
-    private readonly IServiceProvider _serviceProvider;
+    private IServiceProvider _serviceProvider;
     private readonly IServiceCollection _serviceCollection;
 
     public Bootstrapper( )
@@ -25,6 +31,7 @@ public class Bootstrapper
     {
         _serviceCollection.AddSingleton( sp => sp );
         
+        _serviceCollection.AddTransient<AppSettings>( x => ConfigurationLoader.Load<AppSettings>( "net6.0/appsettings.json" ) );
         // Register ped module - do the same on server-side and peds module will work :)
         _serviceCollection.RegisterPedModule( );
         _serviceCollection.RegisterPedTrafficModule( );

@@ -5,8 +5,6 @@ using AltV.Atlas.Commands;
 using AltV.Atlas.IoC;
 using AltV.Atlas.Peds;
 using AltV.Atlas.Vehicles;
-using AltV.Atlas.Vehicles.Factories;
-using AltV.Atlas.Vehicles.Interfaces;
 using AltV.Atlas.Peds.Traffic.Server;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -44,8 +42,8 @@ public class Bootstrapper
     private void ConfigureServices( HostBuilderContext context, IServiceCollection services )
     {
         services.AddOptions( );
-        services.AddSingleton( sp => sp ); 
-
+        services.AddSingleton( sp => sp );
+        
         services.RegisterCommandModule( );
         services.RegisterChatModule( );
         services.RegisterPedModule( );

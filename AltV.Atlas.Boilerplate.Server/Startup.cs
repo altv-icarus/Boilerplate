@@ -10,16 +10,12 @@ namespace AltV.Atlas.Boilerplate.Server;
 
 public class Startup : AsyncResource
 {
-    private Bootstrapper _bootstrapper;
+    private Lazy<Bootstrapper> _bootstrapper = new();
 
-    public Startup( )
-    {
-        _bootstrapper = new Bootstrapper( );
-    }
 
     public override async void OnStart( )
     {
-        await _bootstrapper.RunAsync( );
+        await _bootstrapper.Value.RunAsync( );
     }
 
     public override void OnStop( )
@@ -29,11 +25,11 @@ public class Startup : AsyncResource
 
     public override IEntityFactory<IPed> GetPedFactory( )
     {
-        return _bootstrapper.Services.GetService<IEntityFactory<IPed>>( )!;
+        return _bootstrapper.Value.Services.GetService<IEntityFactory<IPed>>( )!;
     }
 
     public override IEntityFactory<IVehicle> GetVehicleFactory( )
     {
-        return _bootstrapper.Services.GetService<IEntityFactory<IAtlasVehicle>>( )!;
+        return _bootstrapper.Value.Services.GetService<IEntityFactory<IAtlasVehicle>>( )!;
     }
 }

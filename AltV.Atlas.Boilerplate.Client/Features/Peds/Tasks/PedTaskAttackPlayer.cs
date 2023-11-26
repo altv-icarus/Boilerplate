@@ -65,10 +65,10 @@ public class PedTaskAttackPlayer : PedTaskAttackPlayerBase
         }
     }
 
-    public override void OnStop( )
+    public override void OnStop( ISharedPed sharedPed )
     {
         Alt.Natives.RemoveAllPedWeapons( _ped.ScriptId, true );
-
+    
         if( _interval is not null )
         {
             Alt.ClearInterval( (uint) _interval );
