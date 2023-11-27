@@ -6,7 +6,6 @@ using AltV.Atlas.Vehicles.Interfaces;
 using AltV.Atlas.Vehicles.Models;
 using AltV.Net.Elements.Entities;
 using AltV.Net.Enums;
-using AutoMapper;
 using Microsoft.Extensions.Logging;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Vehicles.Commands;
@@ -28,12 +27,12 @@ public class TestVehicleCommand( IAtlasVehicleFactory vehicleFactory, ILogger<Sp
             return;
         }
 
-        var config = new MapperConfiguration( cfg => cfg.CreateMap<AtlasVehicleBase, AtlasTuningVehicle>( ) );
-        var mapper = config.CreateMapper( );
-
-        var veh = mapper.Map<AtlasTuningVehicle>( player.Vehicle );
-
-
+        if( player.Vehicle is not AtlasTuningVehicle veh )
+        {
+            _logger.LogInformation( "Not veh" );
+            return;
+        }
+        
         veh.SetPrimaryMaterial( EColorMaterial.Matte );
         veh.SetSecondaryMaterial( EColorMaterial.Matte );
 
