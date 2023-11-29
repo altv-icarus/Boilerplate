@@ -1,16 +1,8 @@
 using AltV.Atlas.Boilerplate.Server.Features.Commands.Extensions;
-using AltV.Atlas.Boilerplate.Server.Features.Vehicles.Overrides;
 using AltV.Atlas.Chat;
-using AltV.Atlas.Commands.Interfaces;
-using AltV.Atlas.Shared.Extensions;
-using AltV.Atlas.Vehicles.Entities;
-using AltV.Atlas.Vehicles.Factories;
-using AltV.Atlas.Vehicles.Interfaces;
-using AltV.Net;
-using AltV.Net.Async;
-using AltV.Net.Data;
+using AltV.Atlas.Vehicles.Server.Entities;
+using AltV.Atlas.Vehicles.Server.Interfaces;
 using AltV.Net.Elements.Entities;
-using AltV.Net.Enums;
 using Microsoft.Extensions.Logging;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Vehicles.Commands;

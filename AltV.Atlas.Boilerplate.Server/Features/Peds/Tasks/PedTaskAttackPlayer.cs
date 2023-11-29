@@ -1,7 +1,5 @@
 ﻿using AltV.Atlas.Boilerplate.Shared.Peds.Tasks;
-using AltV.Atlas.Peds.Shared.Interfaces;
 using AltV.Net.Enums;
-using AltV.Net.Shared.Elements.Entities;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Peds.Tasks;
 

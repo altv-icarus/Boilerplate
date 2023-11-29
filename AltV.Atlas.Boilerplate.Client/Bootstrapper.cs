@@ -1,11 +1,8 @@
-﻿using System.Text.Json;
-using AltV.Atlas.Client.Configuration;
+﻿using AltV.Atlas.Client.Configuration;
 using AltV.Atlas.Peds.Client;
 using AltV.Atlas.Peds.Traffic.Client;
-using AltV.Atlas.Shared.Converters;
 using AltV.Atlas.Shared.Models;
-using AltV.Net.Client;
-using Microsoft.Extensions.Configuration;
+using AltV.Atlas.Vehicles.Client;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AltV.Atlas.Boilerplate.Client;
@@ -35,6 +32,7 @@ public class Bootstrapper
         // Register ped module - do the same on server-side and peds module will work :)
         _serviceCollection.RegisterPedModule( );
         _serviceCollection.RegisterPedTrafficModule( );
+        _serviceCollection.RegisterVehicleModule( );
     }
 
     public void Run( )

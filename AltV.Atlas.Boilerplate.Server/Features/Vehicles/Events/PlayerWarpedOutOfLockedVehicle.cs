@@ -1,7 +1,7 @@
 ﻿using AltV.Atlas.Chat;
 using AltV.Atlas.IoC.Attributes;
-using AltV.Atlas.Vehicles.AltV.Interfaces;
-using AltV.Atlas.Vehicles.Events;
+using AltV.Atlas.Vehicles.Server.AltV.Interfaces;
+using AltV.Atlas.Vehicles.Server.Events;
 using AltV.Net.Elements.Entities;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Vehicles.Events;

@@ -1,7 +1,6 @@
 ﻿using AltV.Atlas.IoC.Attributes;
 using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.PlayerSpawns.Events;
 

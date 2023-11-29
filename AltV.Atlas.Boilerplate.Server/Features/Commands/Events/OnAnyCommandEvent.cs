@@ -1,8 +1,6 @@
 using AltV.Atlas.Commands;
 using AltV.Atlas.IoC.Attributes;
-using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Commands.Events;

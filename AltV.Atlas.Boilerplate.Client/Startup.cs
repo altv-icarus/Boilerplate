@@ -25,4 +25,10 @@ public class Startup : AsyncResource
         Alt.Log( "GetPedFactory" );
         return _bootstrapper.Value.Services.GetService<IEntityFactory<IPed>>( )!;
     }
+
+    public override IEntityFactory<IVehicle> GetVehicleFactory( )
+    {
+        Alt.Log( "GetVehicleFactory" );
+        return _bootstrapper.Value.Services.GetService<IEntityFactory<IVehicle>>( )!;
+    }
 }

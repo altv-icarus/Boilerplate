@@ -1,9 +1,8 @@
 using AltV.Atlas.Boilerplate.Server.Features.Commands.Extensions;
-using AltV.Atlas.Vehicles.AltV.Entities;
-using AltV.Atlas.Vehicles.Entities;
-using AltV.Atlas.Vehicles.Enums;
-using AltV.Atlas.Vehicles.Interfaces;
-using AltV.Atlas.Vehicles.Models;
+using AltV.Atlas.Vehicles.Server.Entities;
+using AltV.Atlas.Vehicles.Server.Enums;
+using AltV.Atlas.Vehicles.Server.Interfaces;
+using AltV.Atlas.Vehicles.Server.Models;
 using AltV.Net.Elements.Entities;
 using AltV.Net.Enums;
 using Microsoft.Extensions.Logging;

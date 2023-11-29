@@ -18,6 +18,7 @@
       <PackageReference Include="AutoRegisterInject" Version="1.2.1" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
       <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+        <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
     
     <ItemGroup Condition=" '$(Configuration)' != 'Debug' ">
@@ -28,11 +29,8 @@
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
         <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds.Client\AltV.Atlas.Peds.Client.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.Client.Configuration\AltV.Atlas.Client.Configuration.csproj" />
-    </ItemGroup>
-    
-    <ItemGroup>
-      <ProjectReference Include="..\..\AltV.Atlas.Peds.Traffic\AltV.Atlas.Peds.Traffic.Client\AltV.Atlas.Peds.Traffic.Client.csproj" />
-      <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
+        <ProjectReference Include="..\..\AltV.Atlas.Peds.Traffic\AltV.Atlas.Peds.Traffic.Client\AltV.Atlas.Peds.Traffic.Client.csproj" />
+        <ProjectReference Include="..\..\AltV.Atlas.Vehicles\AltV.Atlas.Vehicles.Client\AltV.Atlas.Vehicles.Client.csproj" />
     </ItemGroup>
     
     <ItemGroup>

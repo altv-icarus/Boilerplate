@@ -1,8 +1,6 @@
 ﻿using AltV.Atlas.Boilerplate.Shared.Peds.Tasks;
 using AltV.Atlas.Peds.Client.Interfaces;
-using AltV.Atlas.Peds.Shared.Interfaces;
 using AltV.Net.Client;
-using AltV.Net.Client.Async;
 using AltV.Net.Client.Elements.Interfaces;
 using AltV.Net.Shared.Elements.Entities;
 
