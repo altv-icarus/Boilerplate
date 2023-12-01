@@ -6,13 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup Condition=" '$(Configuration)' != 'Debug' ">
+    <ItemGroup>
         <PackageReference Include="AltV.Atlas.Shared" Version="2.1.0" />
         <PackageReference Include="AltV.Atlas.Peds.Shared" Version="1.4.0" />
     </ItemGroup>
-
-    <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds.Shared\AltV.Atlas.Peds.Shared.csproj" />
-    </ItemGroup>
-    
 </Project>
