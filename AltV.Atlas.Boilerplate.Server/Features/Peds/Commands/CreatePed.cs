@@ -2,10 +2,9 @@
 using AltV.Atlas.Commands.Interfaces;
 using AltV.Atlas.Peds.Factories;
 using AltV.Atlas.Peds.Interfaces;
+using AltV.Atlas.Peds.PedTasks;
 using AltV.Atlas.Peds.Shared.Factories;
 using AltV.Net.Elements.Entities;
-using AltV.Net.Enums;
-using AltV.Atlas.Peds.Traffic.Server.PedTasks;
 using AltV.Atlas.Vehicles.Server.Interfaces;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Peds.Commands;
@@ -23,11 +22,8 @@ public class CreatePed( AtlasPedFactory pedFactory, PedTaskFactory pedTaskFactor
             return;
 
         var ped = await pedFactory.CreatePedAsync<IAtlasServerPed>( pedModel, player.Position, player.Rotation );
-        // var task = pedTaskFactory.CreatePedTask<PedTaskWander>( player.Position, 30, 5, 5 );
         // var task = pedTaskFactory.CreatePedTask<PedTaskAttackPlayer>( player.Id, WeaponModel.SpecialCarbine );
-
-        var vehicle = await vehicleFactory.CreateVehicleAsync<ExtendedVehicle>( VehicleModel.Adder, ped.Position, ped.Rotation );
-        var task = pedTaskFactory.CreatePedTask<PedTaskDriveVehicleWander>( vehicle.Id, speed );
+        var task = pedTaskFactory.CreatePedTask<PedTaskWander>( player.Position, 30, 5, 5 );
         ped.SetPedTask( task );
     }
 }

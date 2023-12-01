@@ -16,6 +16,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="1.1.0" />
         <PackageReference Include="AltV.Net" Version="15.0.6" />
         <PackageReference Include="AltV.Net.Async" Version="15.0.6" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
@@ -40,10 +41,6 @@
         <ProjectReference Include="..\..\AltV.Atlas.Commands\src\AltV.Atlas.Commands.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.IoC\AltV.Atlas.IoC.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds\src\AltV.Atlas.Peds.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Features\PedTraffic\" />
     </ItemGroup>
 
 </Project>

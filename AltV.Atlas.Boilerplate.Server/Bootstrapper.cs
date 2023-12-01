@@ -4,7 +4,6 @@ using AltV.Atlas.Chat;
 using AltV.Atlas.Commands;
 using AltV.Atlas.IoC;
 using AltV.Atlas.Peds;
-using AltV.Atlas.Peds.Traffic.Server;
 using AltV.Atlas.Vehicles.Server;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -44,12 +43,17 @@ public class Bootstrapper
         services.AddOptions( );
         services.AddSingleton( sp => sp );
         
+        #region Free Modules
         services.RegisterCommandModule( );
         services.RegisterChatModule( );
         services.RegisterPedModule( );
         services.RegisterVehicleModule( );
-        services.RegisterPedTrafficModule( );
-
+        #endregion
+        
+        #region Premium Modules
+        //services.RegisterPedTrafficModule( );
+        #endregion
+        
         services.AddTransient<ExtendedVehicle>( );
         
         var assemblies = AppDomain.CurrentDomain.GetAssemblies( );
@@ -62,10 +66,15 @@ public class Bootstrapper
     public Task RunAsync( )
     {
         _host.Services.ResolveStartupServices( );
+        #region Free Modules
         _host.Services.InitializeCommandModule( );
         _host.Services.InitializeChatModule( );
-        _host.Services.InitializePedTrafficModule( );
-
+        #endregion
+        
+        #region Premium Modules
+        // _host.Services.InitializePedTrafficModule( );
+        #endregion
+        
         _logger.LogInformation( "Bootstrapper initiated" );
         Console.WriteLine( "" );
         Console.WriteLine( "|------------------------------------------------------------------------------|" );

@@ -22,7 +22,8 @@
     </ItemGroup>
     
     <ItemGroup Condition=" '$(Configuration)' != 'Debug' ">
-        <PackageReference Include="AltV.Atlas.Peds.Client" Version="1.2.0" />
+        <PackageReference Include="AltV.Atlas.Vehicles.Client" Version="1.1.0" />
+        <PackageReference Include="AltV.Atlas.Peds.Client" Version="1.4.0" />
         <PackageReference Include="AltV.Atlas.Client.Configuration" Version="1.0.0" />
     </ItemGroup>
 
