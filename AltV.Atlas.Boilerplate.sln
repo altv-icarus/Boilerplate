@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltV.Atlas.Boilerplate.Shared", "AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj", "{965C75CD-FB1C-4A2B-B653-50C2FCD0651C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltV.Atlas.Boilerplate.Server", "AltV.Atlas.Boilerplate.Server\AltV.Atlas.Boilerplate.Server.csproj", "{577C571C-BA67-4201-9AAE-D3A504792EF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltV.Atlas.Boilerplate.Client", "AltV.Atlas.Boilerplate.Client\AltV.Atlas.Boilerplate.Client.csproj", "{168AB4C0-F2A5-43B2-A0A1-56AEB2AA9A2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{965C75CD-FB1C-4A2B-B653-50C2FCD0651C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965C75CD-FB1C-4A2B-B653-50C2FCD0651C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965C75CD-FB1C-4A2B-B653-50C2FCD0651C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965C75CD-FB1C-4A2B-B653-50C2FCD0651C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{577C571C-BA67-4201-9AAE-D3A504792EF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577C571C-BA67-4201-9AAE-D3A504792EF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577C571C-BA67-4201-9AAE-D3A504792EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577C571C-BA67-4201-9AAE-D3A504792EF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{168AB4C0-F2A5-43B2-A0A1-56AEB2AA9A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{168AB4C0-F2A5-43B2-A0A1-56AEB2AA9A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{168AB4C0-F2A5-43B2-A0A1-56AEB2AA9A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{168AB4C0-F2A5-43B2-A0A1-56AEB2AA9A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
