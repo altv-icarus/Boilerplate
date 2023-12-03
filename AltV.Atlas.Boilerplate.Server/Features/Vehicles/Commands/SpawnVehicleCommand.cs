@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Vehicles.Commands;
 
-public class SpawnVehicleCommand( IAtlasVehicleFactory vehicleFactory, ILogger<SpawnVehicleCommand> logger ) : IExtendedCommand
+public class SpawnVehicleCommand( IAtlasVehicleFactory vehicleFactory ) : IExtendedCommand
 {
     public string Name { get; set; } = "vehicle";
     public string[ ]? Aliases { get; set; } = new[ ] { "v", "sv" };

@@ -3,7 +3,7 @@ using AltV.Net.Shared.Elements.Entities;
 
 namespace AltV.Atlas.Boilerplate.Shared.Peds.Tasks;
 
-public class PedTaskAttackPlayerBase : IPedTask
+public abstract class PedTaskAttackPlayerBase : IPedTask
 {
     public uint TargetId { get; set; }
     public uint WeaponHash { get; set; }

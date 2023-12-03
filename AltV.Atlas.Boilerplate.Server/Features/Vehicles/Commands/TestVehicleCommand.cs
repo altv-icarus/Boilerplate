@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Vehicles.Commands;
 
-public class TestVehicleCommand( IAtlasVehicleFactory vehicleFactory, ILogger<SpawnVehicleCommand> logger ) : IExtendedCommand
+public class TestVehicleCommand( ILogger<SpawnVehicleCommand> logger ) : IExtendedCommand
 {
     private readonly ILogger<SpawnVehicleCommand> _logger = logger;
 
@@ -19,7 +19,7 @@ public class TestVehicleCommand( IAtlasVehicleFactory vehicleFactory, ILogger<Sp
     public uint RequiredLevel { get; set; } = 0;
     public string HelpText { get; set; } = "/testvehicle";
 
-    public async Task OnCommand( IPlayer player )
+    public void OnCommand( IPlayer player )
     {
         if( !player.IsInVehicle )
         {
@@ -27,10 +27,7 @@ public class TestVehicleCommand( IAtlasVehicleFactory vehicleFactory, ILogger<Sp
         }
 
         if( player.Vehicle is not AtlasTuningVehicle veh )
-        {
-            _logger.LogInformation( "Not veh" );
             return;
-        }
         
         veh.SetPrimaryMaterial( EColorMaterial.Matte );
         veh.SetSecondaryMaterial( EColorMaterial.Matte );

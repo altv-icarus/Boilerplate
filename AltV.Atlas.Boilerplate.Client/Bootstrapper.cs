@@ -1,5 +1,6 @@
 ﻿using AltV.Atlas.Client.Configuration;
 using AltV.Atlas.Peds.Client;
+using AltV.Atlas.Peds.Traffic.Client;
 using AltV.Atlas.Shared.Models;
 using AltV.Atlas.Vehicles.Client;
 using Microsoft.Extensions.DependencyInjection;
@@ -36,14 +37,14 @@ public class Bootstrapper
         #endregion
         
         #region Premium Modules
-        // _serviceCollection.RegisterPedTrafficModule( );
+        _serviceCollection.RegisterPedTrafficModule( );
         #endregion
     }
 
     public void Run( )
     {
         #region Premium Modules
-        // _serviceProvider.InitializePedTrafficModule( );
+        _serviceProvider.InitializePedTrafficModule( );
         #endregion
         Console.WriteLine( "" );
         Console.WriteLine( "|------------------------------------------------------------------------------|" );
