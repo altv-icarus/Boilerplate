@@ -36,14 +36,14 @@ public class Bootstrapper
         #endregion
         
         #region Premium Modules
-        // _serviceCollection.RegisterPedTrafficModule( );
+        // _serviceCollection.RegisterPedTrafficModule( ); // https://altv-atlas.github.io/docs/articles/ped-traffic-module.html
         #endregion
     }
 
     public void Run( )
     {
         #region Premium Modules
-        // _serviceProvider.InitializePedTrafficModule( );
+        // _serviceProvider.InitializePedTrafficModule( ); // https://altv-atlas.github.io/docs/articles/ped-traffic-module.html
         #endregion
         Console.WriteLine( "" );
         Console.WriteLine( "|------------------------------------------------------------------------------|" );

@@ -19,7 +19,7 @@
         <PackageReference Include="AltV.Atlas.Chat" Version="1.2.0" />
         <PackageReference Include="AltV.Atlas.Commands" Version="1.2.0" />
         <PackageReference Include="AltV.Atlas.IoC" Version="1.0.3" />
-        <PackageReference Include="AltV.Atlas.Peds" Version="2.2.0" />
+        <PackageReference Include="AltV.Atlas.Peds" Version="2.4.0" />
         <PackageReference Include="AltV.Atlas.Vehicles" Version="1.0.0" />
         <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="1.1.0" />
         <PackageReference Include="AltV.Net" Version="15.0.6" />

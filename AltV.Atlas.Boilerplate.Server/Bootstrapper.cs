@@ -51,7 +51,7 @@ public class Bootstrapper
         #endregion
         
         #region Premium Modules
-        //services.RegisterPedTrafficModule( );
+        //services.RegisterPedTrafficModule( ); // https://altv-atlas.github.io/docs/articles/ped-traffic-module.html
         #endregion
         
         services.AddTransient<ExtendedVehicle>( );
@@ -72,7 +72,7 @@ public class Bootstrapper
         #endregion
         
         #region Premium Modules
-        // _host.Services.InitializePedTrafficModule( );
+        // _host.Services.InitializePedTrafficModule( ); // https://altv-atlas.github.io/docs/articles/ped-traffic-module.html
         #endregion
         
         _logger.LogInformation( "Bootstrapper initiated" );
