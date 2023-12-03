@@ -14,9 +14,9 @@
     </PropertyGroup>
     
     <ItemGroup>
-        <PackageReference Include="AltV.Atlas.Vehicles.Client" Version="1.1.0" />
-        <PackageReference Include="AltV.Atlas.Peds.Client" Version="1.4.0" />
-        <PackageReference Include="AltV.Atlas.Client.Configuration" Version="1.0.0" />
+        <PackageReference Include="AltV.Atlas.Vehicles.Client" Version="1.2.0" />
+        <PackageReference Include="AltV.Atlas.Peds.Client" Version="1.5.0" />
+        <PackageReference Include="AltV.Atlas.Client.Configuration" Version="1.1.0" />
       <PackageReference Include="AltV.Net.Client.Async" Version="15.0.6" />
       <PackageReference Include="AutoRegisterInject" Version="1.2.1" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
