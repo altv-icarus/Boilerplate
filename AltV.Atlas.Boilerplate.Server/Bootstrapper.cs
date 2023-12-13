@@ -2,10 +2,13 @@
 using AltV.Atlas.Boilerplate.Server.Features.Vehicles.Overrides;
 using AltV.Atlas.Chat;
 using AltV.Atlas.Commands;
+using AltV.Atlas.Database.MySql;
 using AltV.Atlas.IoC;
 using AltV.Atlas.Peds;
 using AltV.Atlas.Peds.Traffic.Server;
 using AltV.Atlas.Vehicles.Server;
+using AltV.Net;
+using AltV.Net.Elements.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -49,6 +52,8 @@ public class Bootstrapper
         services.RegisterChatModule( );
         services.RegisterPedModule( );
         services.RegisterVehicleModule( );
+
+        services.RegisterMySqlModule( context );
         #endregion
         
         #region Premium Modules
