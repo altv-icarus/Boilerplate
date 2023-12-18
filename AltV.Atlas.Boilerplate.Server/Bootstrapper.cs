@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using AltV.Atlas.Admin.Server;
 using AltV.Atlas.Boilerplate.Server.Features.Vehicles.Overrides;
 using AltV.Atlas.Chat;
 using AltV.Atlas.Commands;
@@ -51,13 +52,14 @@ public class Bootstrapper
         services.RegisterCommandModule( );
         services.RegisterChatModule( );
         services.RegisterPedModule( );
-        services.RegisterVehicleModule( );
+        services.RegisterVehicleModule<ExtendedVehicleFactory>( );
+        services.RegisterAdminModule( );
 
         services.RegisterMySqlModule( context );
         #endregion
         
         #region Premium Modules
-        services.RegisterPedTrafficModule( );
+        //services.RegisterPedTrafficModule( );
         #endregion
         
         services.AddTransient<ExtendedVehicle>( );
@@ -78,7 +80,8 @@ public class Bootstrapper
         #endregion
         
         #region Premium Modules
-        _host.Services.InitializePedTrafficModule( );
+        //_host.Services.InitializePedTrafficModule( );
+        _host.Services.InitializeAdminModule( );
         #endregion
         
         _logger.LogInformation( "Bootstrapper initiated" );
