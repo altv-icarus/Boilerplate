@@ -5,6 +5,7 @@ using AltV.Atlas.Chat;
 using AltV.Atlas.Commands;
 using AltV.Atlas.Database.MySql;
 using AltV.Atlas.IoC;
+using AltV.Atlas.KeyInputs.Server;
 using AltV.Atlas.Peds;
 using AltV.Atlas.Peds.Traffic.Server;
 using AltV.Atlas.Vehicles.Server;
@@ -53,12 +54,13 @@ public class Bootstrapper
         services.RegisterChatModule( );
         services.RegisterPedModule( );
         services.RegisterVehicleModule<ExtendedVehicleFactory>( );
-        services.RegisterAdminModule( );
+        services.RegisterKeyInputModule( );
 
         services.RegisterMySqlModule( context );
         #endregion
         
         #region Premium Modules
+        services.RegisterAdminModule( );
         //services.RegisterPedTrafficModule( );
         #endregion
         
@@ -77,6 +79,7 @@ public class Bootstrapper
         #region Free Modules
         _host.Services.InitializeCommandModule( );
         _host.Services.InitializeChatModule( );
+        _host.Services.InitializeKeyInputModule( );
         #endregion
         
         #region Premium Modules

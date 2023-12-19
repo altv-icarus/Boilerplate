@@ -17,12 +17,16 @@
 
     <ItemGroup>
         <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="1.1.0" />
-        <PackageReference Include="AltV.Net" Version="15.0.6" />
-        <PackageReference Include="AltV.Net.Async" Version="15.0.6" />
+        <PackageReference Include="AltV.Net" Version="15.0.8" />
+        <PackageReference Include="AltV.Net.Async" Version="15.0.8" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+        <ProjectReference Include="..\..\AltV.Atlas.Admin\AltV.Atlas.Admin.Server\AltV.Atlas.Admin.Server.csproj" />
+        <ProjectReference Include="..\..\AltV.Atlas.Database\AltV.Atlas.Database.MySql\AltV.Atlas.Database.MySql.csproj" />
+        <ProjectReference Include="..\..\AltV.Atlas.KeyInputs\AltV.Atlas.KeyInputs.Server\AltV.Atlas.KeyInputs.Server.csproj" />
+        <ProjectReference Include="..\..\AltV.Atlas.Scaleforms\AltV.Atlas.Scaleforms.Server\AltV.Atlas.Scaleforms.Server.csproj" />
         <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
     
