@@ -17,8 +17,8 @@
 
     <ItemGroup>
         <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="1.1.0" />
-        <PackageReference Include="AltV.Net" Version="15.0.8" />
-        <PackageReference Include="AltV.Net.Async" Version="15.0.8" />
+        <PackageReference Include="AltV.Net" Version="16.0.1" />
+        <PackageReference Include="AltV.Net.Async" Version="16.0.1" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />

@@ -14,13 +14,13 @@
     </PropertyGroup>
     
     <ItemGroup>
-      <PackageReference Include="AltV.Net.Client.Async" Version="15.0.8" />
+      <PackageReference Include="AltV.Net.Client.Async" Version="16.0.1" />
       <PackageReference Include="AutoRegisterInject" Version="1.2.1" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
       <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
       <ProjectReference Include="..\..\AltV.Atlas.Admin\AltV.Atlas.Admin.Client\AltV.Atlas.Admin.Client.csproj" />
       <ProjectReference Include="..\..\AltV.Atlas.KeyInputs\AltV.Atlas.KeyInputs.Client\AltV.Atlas.KeyInputs.Client.csproj" />
-        <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
+      <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
     
     <ItemGroup Condition=" '$(Configuration)' != 'Debug' ">
