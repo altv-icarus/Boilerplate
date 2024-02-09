@@ -53,7 +53,8 @@ public class Bootstrapper
         #region Free Modules
 
         _serviceProvider.InitializeScaleformModule( );
-        _serviceProvider.InitializeKeyInputModule( new List<Key>{Key.Space, Key.F4} );
+       var whitelistedKeys = new List<Key>{Key.Space, Key.F4};
+        _serviceProvider.InitializeKeyInputModule( whitelistedKeys );
 
         #endregion
           
