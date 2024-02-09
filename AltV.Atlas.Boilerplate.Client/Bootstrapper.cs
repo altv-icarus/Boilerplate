@@ -55,6 +55,11 @@ public class Bootstrapper
 
         //_serviceProvider.InitializePedTrafficModule( );
         //_serviceProvider.InitializeAdminModule( );
+        
+        #endregion
+
+        #region Free Modules
+
         _serviceProvider.InitializeScaleformModule( );
         _serviceProvider.InitializeKeyInputModule( new List<Key>{Key.Space, Key.F4} );
         #endregion
