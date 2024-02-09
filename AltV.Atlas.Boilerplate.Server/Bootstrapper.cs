@@ -1,16 +1,11 @@
 ﻿using System.Reflection;
-using AltV.Atlas.Admin.Server;
 using AltV.Atlas.Boilerplate.Server.Features.Vehicles.Overrides;
 using AltV.Atlas.Chat;
 using AltV.Atlas.Commands;
-using AltV.Atlas.Database.MySql;
 using AltV.Atlas.IoC;
 using AltV.Atlas.KeyInputs.Server;
 using AltV.Atlas.Peds;
-using AltV.Atlas.Peds.Traffic.Server;
 using AltV.Atlas.Vehicles.Server;
-using AltV.Net;
-using AltV.Net.Elements.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -56,11 +51,12 @@ public class Bootstrapper
         services.RegisterVehicleModule<ExtendedVehicleFactory>( );
         services.RegisterKeyInputModule( );
 
-        services.RegisterMySqlModule( context );
+        //Not working yet
+        //services.RegisterMySqlModule( context );
         #endregion
         
         #region Premium Modules
-        services.RegisterAdminModule( );
+        //services.RegisterAdminModule( );
         //services.RegisterPedTrafficModule( );
         #endregion
         
@@ -84,7 +80,7 @@ public class Bootstrapper
         
         #region Premium Modules
         //_host.Services.InitializePedTrafficModule( );
-        _host.Services.InitializeAdminModule( );
+        //_host.Services.InitializeAdminModule( );
         #endregion
         
         _logger.LogInformation( "Bootstrapper initiated" );

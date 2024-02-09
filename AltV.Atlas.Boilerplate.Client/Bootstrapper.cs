@@ -1,8 +1,6 @@
-﻿using AltV.Atlas.Admin.Client;
-using AltV.Atlas.Client.Configuration;
+﻿using AltV.Atlas.Client.Configuration;
 using AltV.Atlas.KeyInputs.Client;
 using AltV.Atlas.Peds.Client;
-using AltV.Atlas.Peds.Traffic.Client;
 using AltV.Atlas.Scaleforms.Client;
 using AltV.Atlas.Shared.Models;
 using AltV.Atlas.Vehicles.Client;
@@ -46,7 +44,7 @@ public class Bootstrapper
         #region Premium Modules
 
         //_serviceCollection.RegisterPedTrafficModule( );
-        _serviceCollection.RegisterAdminModule( );
+        //_serviceCollection.RegisterAdminModule( );
 
         #endregion
     }
@@ -56,7 +54,7 @@ public class Bootstrapper
         #region Premium Modules
 
         //_serviceProvider.InitializePedTrafficModule( );
-        _serviceProvider.InitializeAdminModule( );
+        //_serviceProvider.InitializeAdminModule( );
         _serviceProvider.InitializeScaleformModule( );
         _serviceProvider.InitializeKeyInputModule( new List<Key>{Key.Space, Key.F4} );
         #endregion

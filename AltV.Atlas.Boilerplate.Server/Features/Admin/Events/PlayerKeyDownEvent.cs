@@ -1,5 +1,4 @@
-﻿using AltV.Atlas.Admin.Server;
-using AltV.Atlas.IoC.Attributes;
+﻿using AltV.Atlas.IoC.Attributes;
 using AltV.Atlas.KeyInputs.Server.Events;
 using AltV.Atlas.KeyInputs.Shared.Enums;
 using AltV.Net.Elements.Entities;
@@ -20,7 +19,5 @@ public class PlayerKeyDownEvent
     {
         if( key != AtlasKey.F4 )
             return;
-
-        player.ToggleGodMode( );
     }
 }

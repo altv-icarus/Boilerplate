@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-        <Version>1.0.0</Version>
+        <Version>2.0.0</Version>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -23,23 +23,22 @@
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
-        <ProjectReference Include="..\..\AltV.Atlas.Admin\AltV.Atlas.Admin.Server\AltV.Atlas.Admin.Server.csproj" />
-        <ProjectReference Include="..\..\AltV.Atlas.Database\AltV.Atlas.Database.MySql\AltV.Atlas.Database.MySql.csproj" />
-        <ProjectReference Include="..\..\AltV.Atlas.KeyInputs\AltV.Atlas.KeyInputs.Server\AltV.Atlas.KeyInputs.Server.csproj" />
-        <ProjectReference Include="..\..\AltV.Atlas.Scaleforms\AltV.Atlas.Scaleforms.Server\AltV.Atlas.Scaleforms.Server.csproj" />
         <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
     
     <ItemGroup Condition=" '$(Configuration)' != 'Debug' ">
-        <PackageReference Include="AltV.Atlas.Chat" Version="1.2.0" />
-        <PackageReference Include="AltV.Atlas.Commands" Version="1.2.0" />
+        <PackageReference Include="AltV.Atlas.Chat" Version="2.0.0" />
+        <PackageReference Include="AltV.Atlas.Commands" Version="2.0.0" />
         <PackageReference Include="AltV.Atlas.IoC" Version="1.0.3" />
-        <PackageReference Include="AltV.Atlas.Peds" Version="2.2.0" />
-        <PackageReference Include="AltV.Atlas.Vehicles" Version="1.0.0" />
+        <PackageReference Include="AltV.Atlas.Peds" Version="3.0.0" />
+        <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="2.0.0" />
+        <PackageReference Include="AltV.Atlas.Scaleforms.Server" Version="2.0.0" />
+        <PackageReference Include="AltV.Atlas.KeyInputs.Server" Version="2.0.0" />
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <ProjectReference Include="..\..\AltV.Atlas.Peds.Traffic\AltV.Atlas.Peds.Traffic.Server\AltV.Atlas.Peds.Traffic.Server.csproj" />
+        <ProjectReference Include="..\..\AltV.Atlas.Scaleforms\AltV.Atlas.Scaleforms.Server\AltV.Atlas.Scaleforms.Server.csproj" />
+        <ProjectReference Include="..\..\AltV.Atlas.KeyInputs\AltV.Atlas.KeyInputs.Server\AltV.Atlas.KeyInputs.Server.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.Vehicles\AltV.Atlas.Vehicles.Server\AltV.Atlas.Vehicles.Server.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.Chat\src\AltV.Atlas.Chat.csproj" />
         <ProjectReference Include="..\..\AltV.Atlas.Commands\src\AltV.Atlas.Commands.csproj" />
