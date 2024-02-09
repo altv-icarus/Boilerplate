@@ -8,8 +8,8 @@ namespace AltV.Atlas.Boilerplate.Server;
 
 public class Startup : AsyncResource
 {
+    private static void Main( string[] args ){}
     private Lazy<Bootstrapper> _bootstrapper = new();
-
 
     public override async void OnStart( )
     {

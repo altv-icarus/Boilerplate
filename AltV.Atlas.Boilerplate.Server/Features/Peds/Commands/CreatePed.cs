@@ -9,7 +9,7 @@ using AltV.Atlas.Vehicles.Server.Interfaces;
 
 namespace AltV.Atlas.Boilerplate.Server.Features.Peds.Commands;
 
-public class CreatePed( AtlasPedFactory pedFactory, PedTaskFactory pedTaskFactory, IAtlasVehicleFactory vehicleFactory ) : ICommand
+public class CreatePed( AtlasPedFactory pedFactory, PedTaskFactory pedTaskFactory ) : ICommand
 {
     public string Name { get; set; } = "ped";
     public string[ ]? Aliases { get; set; } = new[ ] { "p" };

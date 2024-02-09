@@ -795,7 +795,41 @@ public static class VehicleList
         { "surfer3", 0xC247AEE5 },
         { "tahoma", 0xE478B977 },
         { "tulip2", 0x1004EDA4 },
-        { "virtue", 0x27E34161 }
+        { "virtue", 0x27E34161 },
+
+        //chop shop update 12.12.2023
+        { "police5", 0x9C32EB57 },
+        { "vivanite", 0xAE2CC02A },
+        { "terminus", 0x9FC300D },
+        { "impaler5", 0xE3788BB1 },
+        { "impaler6", 0xF55D2F7A },
+        { "dorado", 0xD2389392 },
+        { "towtruck3", 0xD7F8BB72 },
+        { "towtruck4", 0xCA3C1FF9 },
+        { "vigero3", 0x1635C007 },
+        { "cavalcade3", 0xC29F8F4E },
+        { "driftfr36", 0xA7C9F9A7 },
+        { "driftjester", 0x96E6932D },
+        { "driftfuto", 0xF52D92EE },
+        { "drifteuros", 0x30F15228 },
+        { "driftyosemite", 0x9BC400EF },
+        { "drifttampa", 0x9AE43988 },
+        { "driftzr350", 0x72A6CEBE },
+        { "driftremus", 0x9F3273F4 },
+        { "polgauntlet", 0xB67633E6 },
+        { "aleutian", 0xFDAEBF27 },
+        { "freight2", 0xE5A41E08 },
+        { "dominator9", 0xE5B3ACA1 },
+        { "turismo3", 0xF8AB457B },
+        { "boxville6", 0xCDC46B21 },
+        { "tvtrailer2", 0x1C136AF8 },
+        { "fr36", 0xE43C11E5 },
+        { "asterope2", 0xD3D366B1 },
+        { "boattrailer2", 0x6D63DAB0 },
+        { "boattrailer3", 0x5BBDB764 },
+        { "phantom4", 0xF84B48D1 },
+        { "trailers5", 0xB075D9C8 },
+        { "baller8", 0xCC8A305C },
     };
 
     public static bool Exists( string vehicleName )
@@ -821,14 +855,14 @@ public static class VehicleList
 
         var veh = matches[ 0 ];
 
-        if( matches.Count <= 1 ) 
+        if( matches.Count <= 1 )
             return veh.Value;
-        
+
         foreach( var match in matches )
         {
-            if( match.Key != vehicleName ) 
+            if( match.Key != vehicleName )
                 continue;
-            
+
             veh = match;
             break;
         }

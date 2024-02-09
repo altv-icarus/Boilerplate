@@ -3,6 +3,7 @@ using AltV.Atlas.Boilerplate.Server.Features.Vehicles.Overrides;
 using AltV.Atlas.Chat;
 using AltV.Atlas.Commands;
 using AltV.Atlas.IoC;
+using AltV.Atlas.KeyInputs.Server;
 using AltV.Atlas.Peds;
 using AltV.Atlas.Vehicles.Server;
 using Microsoft.Extensions.Configuration;
@@ -47,11 +48,17 @@ public class Bootstrapper
         services.RegisterCommandModule( );
         services.RegisterChatModule( );
         services.RegisterPedModule( );
-        services.RegisterVehicleModule( );
+        services.RegisterVehicleModule<ExtendedVehicleFactory>( );
+        services.RegisterKeyInputModule( );
+
+        //Not working yet
+        //services.RegisterMySqlModule( context );
         #endregion
         
         #region Premium Modules
+
         //services.RegisterPedTrafficModule( ); // https://altv-atlas.github.io/docs/articles/ped-traffic-module.html
+
         #endregion
         
         services.AddTransient<ExtendedVehicle>( );
@@ -69,10 +76,13 @@ public class Bootstrapper
         #region Free Modules
         _host.Services.InitializeCommandModule( );
         _host.Services.InitializeChatModule( );
+        _host.Services.InitializeKeyInputModule( );
         #endregion
         
         #region Premium Modules
+
         // _host.Services.InitializePedTrafficModule( ); // https://altv-atlas.github.io/docs/articles/ped-traffic-module.html
+
         #endregion
         
         _logger.LogInformation( "Bootstrapper initiated" );
