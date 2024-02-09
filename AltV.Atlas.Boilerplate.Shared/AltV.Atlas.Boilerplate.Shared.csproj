@@ -10,9 +10,4 @@
         <PackageReference Include="AltV.Atlas.Shared" Version="3.0.0" />
         <PackageReference Include="AltV.Atlas.Peds.Shared" Version="2.0.0" />
     </ItemGroup>
-
-    <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds.Shared\AltV.Atlas.Peds.Shared.csproj" />
-    </ItemGroup>
-    
 </Project>
