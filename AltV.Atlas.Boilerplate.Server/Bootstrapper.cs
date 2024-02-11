@@ -1,4 +1,8 @@
 ﻿using System.Reflection;
+using AltV.Atlas.Boilerplate.Database;
+using AltV.Atlas.Boilerplate.Server.Features.Players.Entities;
+using AltV.Atlas.Boilerplate.Server.Features.Players.Factories;
+using AltV.Atlas.Boilerplate.Server.Features.Players.Interfaces;
 using AltV.Atlas.Boilerplate.Server.Features.Vehicles.Overrides;
 using AltV.Atlas.Chat;
 using AltV.Atlas.Commands;
@@ -6,6 +10,8 @@ using AltV.Atlas.IoC;
 using AltV.Atlas.KeyInputs.Server;
 using AltV.Atlas.Peds;
 using AltV.Atlas.Vehicles.Server;
+using AltV.Net;
+using AltV.Net.Elements.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +31,7 @@ public class Bootstrapper
 
         builder
             .UseContentRoot( Path.GetDirectoryName( Assembly.GetExecutingAssembly( ).Location )! )
-            .ConfigureAppConfiguration( ConfigureAppConfig )
+            // .ConfigureAppConfiguration( ConfigureAppConfig )
             .ConfigureServices( ConfigureServices );
 
         _host = builder.UseConsoleLifetime( ).Build( );
@@ -44,6 +50,14 @@ public class Bootstrapper
         services.AddOptions( );
         services.AddSingleton( sp => sp );
         
+        #region Database Modules
+        
+        #region MySql
+        services.RegisterMySqlModule( context );
+        #endregion
+        
+        #endregion
+        
         #region Free Modules
         services.RegisterCommandModule( );
         services.RegisterChatModule( );
@@ -51,8 +65,7 @@ public class Bootstrapper
         services.RegisterVehicleModule<ExtendedVehicleFactory>( );
         services.RegisterKeyInputModule( );
 
-        //Not working yet
-        //services.RegisterMySqlModule( context );
+        services.RegisterMySqlModule( context );
         #endregion
         
         #region Premium Modules
@@ -61,7 +74,14 @@ public class Bootstrapper
 
         #endregion
         
+        #region Players
+        services.AddTransient<IEntityFactory<IPlayer>, AtlasPlayerFactory>( );
+        services.AddTransient<IAtlasPlayer, AtlasPlayer>( );
+        #endregion
+        
+        #region Vehicles
         services.AddTransient<ExtendedVehicle>( );
+        #endregion
         
         var assemblies = AppDomain.CurrentDomain.GetAssemblies( );
 

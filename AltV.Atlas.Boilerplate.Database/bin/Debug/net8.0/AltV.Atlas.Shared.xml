@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AltV.Atlas.Shared</name>
+    </assembly>
+    <members>
+        <member name="T:AltV.Atlas.Shared.Converters.JsonOptions">
+            <summary>
+            Helper class for JsonSerializer options
+            </summary>
+        </member>
+        <member name="F:AltV.Atlas.Shared.Converters.JsonOptions.Default">
+            <summary>
+            Default serializer options
+            </summary>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Converters.JsonOptions.WithConverters(System.Text.Json.Serialization.JsonConverter[])">
+            <summary>
+            Add a set of serializers to the current json options
+            </summary>
+            <param name="converters">The converters to add</param>
+            <returns>JsonSerializerOptions with default settings and included converters</returns>
+        </member>
+        <member name="T:AltV.Atlas.Shared.Converters.JsonTypeConverter`1">
+            <summary>
+            Converts JSON to a given type and vice versa
+            Thanks zziger :)
+            </summary>
+            <typeparam name="T">The type to convert</typeparam>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Converters.JsonTypeConverter`1.#ctor">
+            <summary>
+            Creates a new instance of this class
+            </summary>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Converters.JsonTypeConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            Reads JSON and converts it to the target object
+            </summary>
+            <param name="reader"></param>
+            <param name="typeToConvert"></param>
+            <param name="options"></param>
+            <returns></returns>
+            <exception cref="T:System.Text.Json.JsonException"></exception>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Converters.JsonTypeConverter`1.Write(System.Text.Json.Utf8JsonWriter,`0,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            Writes an object to JSON and appends type discriminator
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="options"></param>
+        </member>
+        <member name="T:AltV.Atlas.Shared.Extensions.EnumExtensions">
+            <summary>
+            A class that contains some useful methods for enums
+            </summary>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.EnumExtensions.PickRandom``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns a random value from an enum
+            </summary>
+            <param name="source">The enum to take it from</param>
+            <typeparam name="T">Type of enum</typeparam>
+            <returns>A random value from the enum</returns>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.EnumExtensions.PickRandom``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Returns a random amount of values from an enum
+            </summary>
+            <param name="source">The enum to take it from</param>
+            <param name="count">The amount to return</param>
+            <typeparam name="T">Type of enum</typeparam>
+            <returns>A collection of enum values</returns>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.EnumExtensions.Shuffle``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Shuffle a collection
+            </summary>
+            <param name="source">The collection to shuffle</param>
+            <typeparam name="T">Type of collection</typeparam>
+            <returns>Shuffled collection</returns>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.EnumExtensions.WithIndex``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Lets you iterate a collection with an index
+            </summary>
+            <param name="source">The collection</param>
+            <typeparam name="T">Type of the item</typeparam>
+            <returns>Returns indexed collection</returns>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.EnumExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Checks if the collection is null or empty
+            </summary>
+            <param name="source">The collection to check</param>
+            <typeparam name="T">The type of the collection</typeparam>
+            <returns>If the collection is null or empty</returns>
+        </member>
+        <member name="T:AltV.Atlas.Shared.Extensions.FloatExtensions">
+            <summary>
+            A class that contains some useful methods for floats
+            </summary>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.FloatExtensions.ToRadian(System.Single)">
+            <summary>
+            Converts degrees to radians
+            </summary>
+            <param name="degrees">the float value in degrees</param>
+            <returns></returns>
+        </member>
+        <member name="T:AltV.Atlas.Shared.Extensions.RgbaExtensions">
+            <summary>
+            A class that contains some useful methods for Rgba
+            </summary>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.RgbaExtensions.Random">
+            <summary>
+            Return a instance of Rgba with random values
+            </summary>
+            <returns>Instance of rgba with random values</returns>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.RgbaExtensions.TryParseRgb(System.String,System.Drawing.Color@)">
+            <summary>
+            Tries to parse a string to a rgb color
+            </summary>
+            <param name="rgb">The rgb value</param>
+            <param name="color">The color value</param>
+            <returns>Returns if the parsing was successful</returns>
+        </member>
+        <member name="T:AltV.Atlas.Shared.Extensions.TaskExtensions">
+            <summary>
+            A class that contains some useful methods for tasks
+            </summary>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.TaskExtensions.HandleException(System.Threading.Tasks.Task,Microsoft.Extensions.Logging.ILogger,System.String)">
+            <summary>
+            Ensures task exceptions are handled properly
+            Thanks deluvas &lt;3
+            </summary>
+            <param name="task">The task that throws the exception</param>
+            <param name="logger">A logger instance</param>
+            <param name="error">An additional error message to show in console</param>
+        </member>
+        <member name="T:AltV.Atlas.Shared.Extensions.VectorExtensions">
+            <summary>
+            A class that contains some useful methods for vectors
+            </summary>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.VectorExtensions.ToRadian(System.Numerics.Vector3)">
+            <summary>
+            Convert a vector3 from degrees to radians
+            </summary>
+            <param name="degrees">The vector3 with values in degrees</param>
+            <returns>A new vector3 with values in radians</returns>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.VectorExtensions.AddSpeedToVector(System.Numerics.Vector3,System.Numerics.Vector3,System.Single,System.Boolean)">
+            <summary>
+            Adds a speed value to the given vector3
+            </summary>
+            <param name="vector3">The given vector3</param>
+            <param name="secondVector3">The vector3 to add with speed</param>
+            <param name="speed">The speed value to add</param>
+            <param name="lr">Is it left/right</param>
+            <returns>The new vector3 with the added speed</returns>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.VectorExtensions.CamVectorRight(System.Numerics.Vector3)">
+            <summary>
+            Gets the cameras right vector3
+            </summary>
+            <param name="camVector3">The cams vector3 value</param>
+            <returns>Cameras right vector3</returns>
+        </member>
+        <member name="M:AltV.Atlas.Shared.Extensions.VectorExtensions.CamVectorForward(System.Numerics.Vector3)">
+            <summary>
+            Gets the cameras forward vector3
+            </summary>
+            <param name="camVector3">The cams vector3 value</param>
+            <returns>Cameras forward vector3</returns>
+        </member>
+        <member name="T:AltV.Atlas.Shared.Models.AppSettings">
+            <summary>
+            Contains data which can be loaded from an appsettings.json file
+            </summary>
+        </member>
+        <member name="P:AltV.Atlas.Shared.Models.AppSettings.TrafficSettings">
+            <summary>
+            Traffic settings which are used in the Peds.Traffic module
+            </summary>
+        </member>
+        <member name="P:AltV.Atlas.Shared.Models.AppSettings.Database">
+            <summary>
+            Database settings which are used in the Database module
+            </summary>
+        </member>
+        <member name="T:AltV.Atlas.Shared.Models.DatabaseSettings">
+            <summary>
+            Contains database settings such as connection string
+            </summary>
+        </member>
+        <member name="F:AltV.Atlas.Shared.Models.DatabaseSettings.Key">
+            <summary>
+            The key by which the data can be found in appsettings.json
+            </summary>
+        </member>
+        <member name="P:AltV.Atlas.Shared.Models.DatabaseSettings.ConnectionString">
+            <summary>
+            The connection string of your specific database
+            </summary>
+        </member>
+        <member name="T:AltV.Atlas.Shared.Models.TrafficSettings">
+            <summary>
+            Contains mutable data for Peds.Traffic module
+            </summary>
+        </member>
+        <member name="F:AltV.Atlas.Shared.Models.TrafficSettings.Key">
+            <summary>
+            The key by which the data can be found in appsettings.json
+            </summary>
+        </member>
+        <member name="P:AltV.Atlas.Shared.Models.TrafficSettings.MaxTrafficVehiclesInStreamDistance">
+            <summary>
+            Maximum amount of PED vehicles that can be within stream distance of a player
+            </summary>
+        </member>
+        <member name="P:AltV.Atlas.Shared.Models.TrafficSettings.MinimumTrafficNodesToGenerate">
+            <summary>
+            Minimum amount of nodes it should generate near the player to spawn a vehicle at
+            </summary>
+        </member>
+        <member name="P:AltV.Atlas.Shared.Models.TrafficSettings.SpawnRadius">
+            <summary>
+            Radius around the player at which a vehicle can spawn
+            </summary>
+        </member>
+        <member name="P:AltV.Atlas.Shared.Models.TrafficSettings.MinimumSpawnDistanceFromPlayer">
+            <summary>
+            Minimum distance from the player before a position is considered valid for a ped to spawn at
+            </summary>
+        </member>
+        <member name="P:AltV.Atlas.Shared.Models.TrafficSettings.CleanupIntervalMs">
+            <summary>
+            The server does a cleanup of invalid peds/vehicles every X milliseconds. This can be adjusted with this value
+            </summary>
+        </member>
+        <member name="P:AltV.Atlas.Shared.Models.TrafficSettings.TrafficSpawnIntervalMs">
+            <summary>
+            The interval at which valid locations for traffic peds are calculated. If you see vehicles spawning on top of eachother, try increasing this value
+            </summary>
+        </member>
+    </members>
+</doc>

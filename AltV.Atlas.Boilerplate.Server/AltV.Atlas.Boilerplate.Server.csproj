@@ -16,14 +16,25 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="1.1.0" />
+        <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="1.2.0" />
         <PackageReference Include="AltV.Net" Version="16.0.1" />
         <PackageReference Include="AltV.Net.Async" Version="16.0.1" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
         <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
+        <ProjectReference Include="..\AltV.Atlas.Boilerplate.Database\AltV.Atlas.Boilerplate.Database.csproj" />
+
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
   
     <ItemGroup Condition=" '$(Configuration)' != 'Debug' ">
@@ -46,4 +57,10 @@
         <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds\src\AltV.Atlas.Peds.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+    
 </Project>

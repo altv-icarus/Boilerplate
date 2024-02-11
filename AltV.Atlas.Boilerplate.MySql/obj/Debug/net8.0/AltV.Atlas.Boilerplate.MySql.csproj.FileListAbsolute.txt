@@ -1,0 +1,15 @@
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\bin\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.deps.json
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\bin\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.runtimeconfig.json
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\bin\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.dll
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\bin\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.pdb
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.csproj.AssemblyReference.cache
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.GeneratedMSBuildEditorConfig.editorconfig
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.AssemblyInfoInputs.cache
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.AssemblyInfo.cs
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.csproj.CoreCompileInputs.cache
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.sourcelink.json
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.dll
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\refint\AltV.Atlas.Boilerplate.MySql.dll
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.pdb
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\AltV.Atlas.Boilerplate.MySql.genruntimeconfig.cache
+G:\ALTV DEV\_atlas\src\AltV.Atlas\AltV.Atlas.Boilerplate\AltV.Atlas.Boilerplate.MySql\obj\Debug\net8.0\ref\AltV.Atlas.Boilerplate.MySql.dll
