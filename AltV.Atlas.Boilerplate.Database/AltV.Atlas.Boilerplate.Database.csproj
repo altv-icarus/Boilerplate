@@ -19,6 +19,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\AltV.Atlas.Database\AltV.Atlas.Database.Shared\AltV.Atlas.Database.Shared.csproj" />
+      <ProjectReference Include="..\..\AltV.Atlas.Shared\AltV.Atlas.Shared.csproj" />
     </ItemGroup>
 
 </Project>

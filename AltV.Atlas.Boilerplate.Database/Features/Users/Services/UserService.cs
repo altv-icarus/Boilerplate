@@ -1,4 +1,5 @@
-﻿using AltV.Atlas.Boilerplate.Database.Context;
+﻿using System.Threading.Tasks;
+using AltV.Atlas.Boilerplate.Database.Context;
 using AltV.Atlas.Boilerplate.Database.Features.Users.Interfaces;
 using AltV.Atlas.Boilerplate.Database.Features.Users.Models;
 using AltV.Atlas.Database.Shared.Interfaces;
