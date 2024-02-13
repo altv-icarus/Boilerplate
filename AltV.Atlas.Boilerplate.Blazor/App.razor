@@ -1,0 +1,35 @@
+﻿@using AltVBlazor.Events
+@using AltV.Atlas.Boilerplate.Blazor.Features.AtlasChat
+@using AltV.Atlas.Boilerplate.Blazor.Features.Hud
+
+@inherits AltVComponentBase
+
+@foreach (var component in _components.Values.Where(component => component.IsVisible))
+{
+    <DynamicComponent Type="@component.GetType()"/>
+}
+
+@code
+{
+    private readonly Dictionary<string, AtlasComponentBase> _components = new();
+
+    protected override void OnInitialized()
+    {
+        RegisterAtlasComponents();
+        base.OnInitialized();
+    }
+
+    [JSInvokable]
+    [AltVEvent("toggleview")]
+    public void ToggleView(string viewName, bool toggle)
+    {
+        _components[viewName].IsVisible = toggle;
+        StateHasChanged();
+    }
+
+    private void RegisterAtlasComponents()
+    {
+        _components.RegisterAtlasChat();
+        _components.AddHud();
+    }
+}
