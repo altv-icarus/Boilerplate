@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltV.Atlas.Boilerplate.Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltV.Atlas.Boilerplate.Client", "AltV.Atlas.Boilerplate.Client\AltV.Atlas.Boilerplate.Client.csproj", "{168AB4C0-F2A5-43B2-A0A1-56AEB2AA9A2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltV.Atlas.Boilerplate.Blazor", "AltV.Atlas.Boilerplate.Blazor\AltV.Atlas.Boilerplate.Blazor.csproj", "{0BDF08C0-B8D9-45BE-B6CF-4746FFCA42CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{168AB4C0-F2A5-43B2-A0A1-56AEB2AA9A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{168AB4C0-F2A5-43B2-A0A1-56AEB2AA9A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{168AB4C0-F2A5-43B2-A0A1-56AEB2AA9A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BDF08C0-B8D9-45BE-B6CF-4746FFCA42CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BDF08C0-B8D9-45BE-B6CF-4746FFCA42CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BDF08C0-B8D9-45BE-B6CF-4746FFCA42CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BDF08C0-B8D9-45BE-B6CF-4746FFCA42CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
