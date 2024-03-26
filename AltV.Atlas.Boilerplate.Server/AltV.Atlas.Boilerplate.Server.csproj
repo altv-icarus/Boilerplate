@@ -24,8 +24,6 @@
         <PackageReference Include="AltV.Net.Async" Version="16.0.1" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
         <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
   

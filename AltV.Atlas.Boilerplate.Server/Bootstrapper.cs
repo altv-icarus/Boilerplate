@@ -24,9 +24,14 @@ public class Bootstrapper
         var builder = Host.CreateDefaultBuilder( );
 
         builder
-            .UseContentRoot( Path.GetDirectoryName( Assembly.GetExecutingAssembly( ).Location )! )
-            .ConfigureAppConfiguration( ConfigureAppConfig )
-            .ConfigureServices( ConfigureServices );
+            .UseContentRoot(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!)
+            .ConfigureAppConfiguration(ConfigureAppConfig)
+            .ConfigureServices(ConfigureServices)
+            .ConfigureLogging(logging =>
+            {
+                logging.ClearProviders();
+                logging.AddConsole();
+            });
 
         _host = builder.UseConsoleLifetime( ).Build( );
         _logger = _host.Services.GetService<ILogger<Bootstrapper>>( )!;
@@ -85,7 +90,6 @@ public class Bootstrapper
 
         #endregion
         
-        _logger.LogInformation( "Bootstrapper initiated" );
         Console.WriteLine( "" );
         Console.WriteLine( "|------------------------------------------------------------------------------|" );
         Console.WriteLine( "|                      alt:V MP Atlas Boilerplate started!                     |" );
@@ -93,6 +97,8 @@ public class Bootstrapper
         Console.WriteLine( $"| .NET Version: {Environment.Version.ToString( )}                                                          |" );
         Console.WriteLine( "|------------------------------------------------------------------------------|" );
         Console.WriteLine( "" );
+        
+        _logger.LogInformation( "Bootstrapper initiated" );
         return _host.RunAsync( );
     }
 }
