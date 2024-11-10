@@ -20,10 +20,13 @@
     </Target>
 
     <ItemGroup>
-        <PackageReference Include="AltV.Net" Version="16.0.1" />
-        <PackageReference Include="AltV.Net.Async" Version="16.0.1" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+        <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="2.1.0" />
+        <PackageReference Include="AltV.Net" Version="16.4.0" />
+        <PackageReference Include="AltV.Net.Async" Version="16.4.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
         <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
   
@@ -32,7 +35,7 @@
         <PackageReference Include="AltV.Atlas.Commands" Version="2.0.0" />
         <PackageReference Include="AltV.Atlas.IoC" Version="1.0.3" />
         <PackageReference Include="AltV.Atlas.Peds" Version="3.0.0" />
-        <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="2.0.0" />
+        <PackageReference Include="AltV.Atlas.Vehicles.Server" Version="2.1.0" />
         <PackageReference Include="AltV.Atlas.Scaleforms.Server" Version="2.0.0" />
         <PackageReference Include="AltV.Atlas.KeyInputs.Server" Version="2.0.0" />
     </ItemGroup>
