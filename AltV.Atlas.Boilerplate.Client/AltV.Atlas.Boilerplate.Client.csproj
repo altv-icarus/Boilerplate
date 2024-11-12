@@ -11,35 +11,25 @@
         <Optimize>true</Optimize>
         <PlatformTarget>x64</PlatformTarget>
     </PropertyGroup>
-
-    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="powershell.exe -ExecutionPolicy Bypass -File ../createDirectory.ps1 -directoryPath ../../altv-server/resources/atlas/client" />
-        <Exec Command="xcopy &quot;$(TargetDir).&quot; &quot;../../altv-server/resources/atlas/client&quot; /Y" />
-    </Target>
-    
-    <ItemGroup>
-
-      <PackageReference Include="AltV.Net.Client.Async" Version="16.4.0" />
-      <PackageReference Include="AutoRegisterInject" Version="1.2.1" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
-      <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
-      <ProjectReference Include="..\..\AltV.Atlas.Scaleforms\AltV.Atlas.Scaleforms.Client\AltV.Atlas.Scaleforms.Client.csproj" />
-      <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
-    </ItemGroup>
-    
-    <ItemGroup>
-        <PackageReference Include="AltV.Atlas.Vehicles.Client" Version="2.0.0" />
-        <PackageReference Include="AltV.Atlas.Peds.Client" Version="2.0.0" />
-        <PackageReference Include="AltV.Atlas.Client.Configuration" Version="2.0.0" />
-        <PackageReference Include="AltV.Atlas.KeyInputs.Client" Version="2.0.0" />
-        <PackageReference Include="AltV.Atlas.Scaleforms.Client" Version="2.0.0" />
-    </ItemGroup>
     
     <ItemGroup>
       <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="AltV.Net.Client.Async" Version="16.4.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\AltV.Atlas.Client.Configuration\AltV.Atlas.Client.Configuration.csproj" />
+      <ProjectReference Include="..\..\AltV.Atlas.Peds.Traffic\AltV.Atlas.Peds.Traffic.Client\AltV.Atlas.Peds.Traffic.Client.csproj" />
+      <ProjectReference Include="..\..\AltV.Atlas.Peds\AltV.Atlas.Peds.Client\AltV.Atlas.Peds.Client.csproj" />
+      <ProjectReference Include="..\..\AltV.Atlas.Shared\AltV.Atlas.Shared.csproj" />
+      <ProjectReference Include="..\..\AltV.Atlas.Vehicles\AltV.Atlas.Vehicles.Client\AltV.Atlas.Vehicles.Client.csproj" />
+      <ProjectReference Include="..\AltV.Atlas.Boilerplate.Shared\AltV.Atlas.Boilerplate.Shared.csproj" />
     </ItemGroup>
 
 </Project>
